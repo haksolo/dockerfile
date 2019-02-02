@@ -11,7 +11,7 @@ RUN apt-get install -y libzip-dev && docker-php-ext-install zip
 
 RUN docker-php-ext-install pdo_mysql
 
-# RUN apt-get install -y libssl-dev && pecl install mongodb && docker-php-ext-enable mongodb
+RUN apt-get install -y libssl-dev && pecl install mongodb && docker-php-ext-enable mongodb
 
 RUN curl -s https://phar.phpunit.de/phpunit-6.5.phar -O -L \
 	&& chmod +x phpunit-6.5.phar \
