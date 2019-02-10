@@ -13,6 +13,6 @@ RUN docker-php-ext-install pdo_mysql
 
 RUN apt-get install -y libssl-dev && pecl install mongodb && docker-php-ext-enable mongodb
 
-RUN curl -s https://phar.phpunit.de/phpunit-6.5.phar -O -L \
-	&& chmod +x phpunit-6.5.phar \
-	&& mv phpunit-6.5.phar /usr/local/bin/phpunit
+RUN curl -s https://phar.phpunit.de/phpunit-7.5.4.phar -O -L \
+	&& chmod +x phpunit-7.5.4.phar \
+	&& mv phpunit-7.5.4.phar /usr/local/bin/phpunit
